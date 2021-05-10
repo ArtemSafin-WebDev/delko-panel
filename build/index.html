@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <script src="assets/js/ie11CustomProperties.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <title>
+        Papers
+    </title>
+</head>
+
+<body class="no-touch" ontouchstart="">
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 7.42 12" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M0 10.59L4.59 6 0 1.41 1.42 0l6 6-6 6z"/></symbol><symbol viewBox="0 0 26.25 18.75" id="award" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v18.75h26.25V0zm1.88 1.88h22.5v15H1.88zm11.25 1.87a1.8 1.8 0 00-1.06.35l-.56.38-.7.12a1.83 1.83 0 00-1.52 1.52l-.12.71-.38.55a1.79 1.79 0 000 2.11l.38.56.12.7a1.82 1.82 0 00.49 1L7.5 14.06h1.88v1.88l3-3a1.86 1.86 0 001.53 0l3 3v-1.88h1.87l-2.31-2.31a1.8 1.8 0 00.52-1l.12-.7.38-.56a1.79 1.79 0 000-2.11l-.38-.55-.11-.71a1.86 1.86 0 00-1.56-1.52l-.7-.12-.56-.38a1.79 1.79 0 00-1.05-.35zm0 1.9l.7.5.17.12.24.06.85.14.14.85.06.24.12.17.5.71-.5.7-.12.18-.06.23-.14.85-.85.15-.24.06-.17.11-.7.5-.71-.5-.17-.11-.25-.06-.85-.15-.15-.85v-.23l-.12-.18-.5-.7.5-.71.12-.17v-.24l.14-.85.86-.14.24-.06.17-.12z"/></symbol><symbol viewBox="0 0 22.5 20.63" id="cash" xmlns="http://www.w3.org/2000/svg"><path d="M16.41 0a10 10 0 00-4.05.76 4.17 4.17 0 00-1.4 1 2.3 2.3 0 00-.65 1.55v4.1l-.17-.09a10.13 10.13 0 00-4.05-.76 10.11 10.11 0 00-4 .76 4.32 4.32 0 00-1.41 1A2.34 2.34 0 000 9.84v7.5a2.32 2.32 0 00.67 1.56 4.45 4.45 0 001.41 1 9.82 9.82 0 004 .77 9.87 9.87 0 004-.77 4.41 4.41 0 001.4-1 2.33 2.33 0 00.68-1.56v-.41a2.12 2.12 0 00.2.12 9.87 9.87 0 004 .76 9.82 9.82 0 004-.76 4.32 4.32 0 001.41-1 2.28 2.28 0 00.67-1.55V3.28a2.34 2.34 0 00-.64-1.55 4.32 4.32 0 00-1.41-1A9.94 9.94 0 0016.41 0zm0 1.88a8.25 8.25 0 013.25.61 2.89 2.89 0 01.82.53c.15.16.15.22.15.26s0 .11-.15.26a2.69 2.69 0 01-.82.53 8.23 8.23 0 01-3.25.62 8.25 8.25 0 01-3.26-.62 2.69 2.69 0 01-.82-.53c-.14-.15-.14-.21-.14-.26s0-.1.14-.26a2.89 2.89 0 01.82-.53 8.26 8.26 0 013.26-.61zm-4.22 3.83l.17.09a10 10 0 004.05.76 9.94 9.94 0 004-.76l.18-.09V7s0 .14-.15.29a2.57 2.57 0 01-.82.53 8.35 8.35 0 01-3.25.59 8.37 8.37 0 01-3.26-.59 2.69 2.69 0 01-.82-.53.39.39 0 01-.1-.29zm-6.1 2.73a8.26 8.26 0 013.26.61 2.89 2.89 0 01.82.53c.14.16.14.22.14.26s0 .11-.14.27a2.9 2.9 0 01-.82.52 8.07 8.07 0 01-3.26.62 8.06 8.06 0 01-3.25-.62 2.9 2.9 0 01-.84-.52c-.14-.16-.14-.22-.14-.27s0-.1.14-.26a2.89 2.89 0 01.82-.53 8.25 8.25 0 013.27-.61zm6.1 1a2.12 2.12 0 00.2.12 9.87 9.87 0 004 .76 9.82 9.82 0 004-.76 2.25 2.25 0 00.21-.12v1.35c0 .05 0 .14-.15.29a2.57 2.57 0 01-.82.53 8.35 8.35 0 01-3.25.59 8.37 8.37 0 01-3.26-.59 2.69 2.69 0 01-.82-.53.39.39 0 01-.14-.29zM1.88 12.28l.17.08a9.94 9.94 0 004 .77 10 10 0 004.05-.77l.17-.08v1.31a.42.42 0 01-.14.3 2.9 2.9 0 01-.82.52 8.37 8.37 0 01-3.22.59 8.35 8.35 0 01-3.25-.59 2.76 2.76 0 01-.84-.52.42.42 0 01-.14-.3zm10.31.9a2.12 2.12 0 00.2.12 9.87 9.87 0 004 .76 9.82 9.82 0 004-.76 2.25 2.25 0 00.21-.12v1.35c0 .05 0 .14-.15.29a2.57 2.57 0 01-.82.53 8.35 8.35 0 01-3.25.59 8.37 8.37 0 01-3.26-.59 2.69 2.69 0 01-.82-.53.39.39 0 01-.14-.29zM1.88 16c.07 0 .12.08.2.11a9.82 9.82 0 004 .77 9.87 9.87 0 004-.77l.2-.11v1.34a.42.42 0 01-.14.3 2.9 2.9 0 01-.82.52 8.37 8.37 0 01-3.26.59 8.35 8.35 0 01-3.25-.59 2.76 2.76 0 01-.81-.52.42.42 0 01-.14-.3z"/></symbol><symbol viewBox="0 0 24.38 24.38" id="docs" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v20.63h8.91a8.44 8.44 0 108-13.07V0zm1.88 1.88H15v5.68a8.4 8.4 0 00-4.34 1.82H3.75v1.87h5.16A8 8 0 008 13.13H3.75V15h3.81a7.3 7.3 0 00-.06.94 8.47 8.47 0 00.5 2.81H1.88zm1.87 3.75V7.5h9.38V5.63zm12.19 3.75a6.56 6.56 0 11-6.56 6.56 6.54 6.54 0 016.56-6.56zm-3.11 1.87a6 6 0 00-2.22 2.81h8.14v-2.81zm-2.43 5.63a6 6 0 001.32 2.81h7v-2.81z"/></symbol><symbol viewBox="0 0 24.38 24.38" id="info" xmlns="http://www.w3.org/2000/svg"><path d="M12.19 0a12.19 12.19 0 1012.19 12.19A12.21 12.21 0 0012.19 0zm0 1.88A10.31 10.31 0 111.88 12.19 10.3 10.3 0 0112.19 1.88zm-.94 4.68v1.88h1.88V6.56zm0 3.75v7.5h1.88v-7.5z"/></symbol><symbol viewBox="0 0 20.63 20.63" id="papers" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 0v13.13h1.88V1.88h13.12v15a1.88 1.88 0 01-3.75 0v-2.82H0v2.82a3.76 3.76 0 003.75 3.75h13.13a3.76 3.76 0 003.75-3.75V0zM7.5 5.63V7.5h1.88V5.63zm3.75 0V7.5h5.63V5.63zM7.5 9.38v1.87h1.88V9.38zm3.75 0v1.87h5.63V9.38zm-9.37 6.56h11.25v.94a3.75 3.75 0 00.52 1.87h-9.9a1.85 1.85 0 01-1.87-1.87z"/></symbol><symbol viewBox="0 0 21.3 20.65" id="return" xmlns="http://www.w3.org/2000/svg"><path d="M0 20.65v-1.87A14 14 0 0014.06 4.72V3.6l-4 4L8.7 6.27 14.33.64 15 0l.67.64 5.63 5.63L20 7.62l-4-4v1.1A16 16 0 010 20.65z"/></symbol><symbol viewBox="0 0 20.63 22.56" id="shield" xmlns="http://www.w3.org/2000/svg"><path d="M10.31 0a9.37 9.37 0 00-4.8 1.52A8.37 8.37 0 01.94 2.81H0v.94C0 11 2.45 15.7 4.92 18.54a15.09 15.09 0 005 3.9l.35.12.35-.12a14.62 14.62 0 005-3.87c2.48-2.84 4.93-7.56 4.93-14.82v-.94h-.94a8.37 8.37 0 01-4.57-1.29A9.44 9.44 0 0010.31 0zm0 1.88a7.4 7.4 0 013.9 1.28 11.56 11.56 0 004.48 1.38c-.18 6.34-2.28 10.38-4.39 12.8a11.42 11.42 0 01-4 3.14 11.7 11.7 0 01-4-3.17c-2.12-2.43-4.22-6.46-4.4-12.77a11.56 11.56 0 004.52-1.38 7.33 7.33 0 013.89-1.28zm0 3.75A2.83 2.83 0 007.5 8.44 2.77 2.77 0 008 10a4.7 4.7 0 00-2.34 4H7.5a2.82 2.82 0 015.63 0H15a4.7 4.7 0 00-2.34-4 2.83 2.83 0 00-2.35-4.39zm0 1.87a.94.94 0 11-.93.94.93.93 0 01.93-.94z"/></symbol><symbol id="truck" viewBox="0 0 28.13 18.75" xmlns="http://www.w3.org/2000/svg"><defs><style>.icls-1{fill-rule:evenodd}</style></defs><path class="icls-1" d="M0 8.5v7.44h3a3.72 3.72 0 007.21 0H18a3.72 3.72 0 007.21 0h3V6.18l-.27-.29-5.7-5.63-.3-.26h-6.88v8.5zm21.15-6.62h-4.27v12.18H18a3.72 3.72 0 017.21 0h1.08V7zM15 10.31H1.88v3.75H3a3.72 3.72 0 017.21 0H15zM8.44 15a1.88 1.88 0 10-1.88 1.88A1.86 1.86 0 008.44 15zm15 0a1.88 1.88 0 10-1.88 1.88A1.86 1.86 0 0023.44 15z"/></symbol><symbol viewBox="0 0 20.63 22.5" id="work" xmlns="http://www.w3.org/2000/svg"><path d="M4.22 0A3.28 3.28 0 107.5 3.28 3.29 3.29 0 004.22 0zm0 1.88a1.41 1.41 0 11-1.41 1.4 1.39 1.39 0 011.41-1.4zm7 .93v.94H9.38v1.88h9.37V15H8.44v1.88h2.34l-2.34 4.68h1.87l1.88-3.75 1.87 3.75h1.88l-2.35-4.68h7V3.75h-7.5v-.94zM3.75 7.5A3.76 3.76 0 000 11.25v4.92l1.88.94v5.39h1.87v-6.56l-.53-.24-1.34-.7v-3.75a1.85 1.85 0 011.87-1.87h1.64a1.86 1.86 0 011.32.55l2 2 .29.27h4.14v-1.89H9.79l-1.73-1.7H8A3.79 3.79 0 005.39 7.5zm.94 8.44v6.56h1.87v-6.56z"/></symbol><symbol viewBox="0 0 22.5 22.5" id="wrench" xmlns="http://www.w3.org/2000/svg"><path d="M15.94 0a6.58 6.58 0 00-6.57 6.56 6.3 6.3 0 00.39 1.89L.88 17.33a3.06 3.06 0 000 4.29 3.06 3.06 0 004.29 0l8.88-8.88a6.24 6.24 0 001.89.39 6.58 6.58 0 006.56-6.57 6.38 6.38 0 00-.59-2.69l-.55-1.24-1 1-3 3h-1.42V5.08l3.93-3.94-1.24-.55A6.38 6.38 0 0015.94 0zm0 1.88c.16 0 .29.08.45.09L14.06 4.3v4.14h4.14l2.32-2.33a3.63 3.63 0 01.1.45 4.67 4.67 0 01-4.68 4.69 4.74 4.74 0 01-1.85-.38l-.58-.25-9.67 9.67a1.15 1.15 0 01-1.63 0 1.16 1.16 0 010-1.64L11.87 9l-.24-.59a4.49 4.49 0 01-.38-1.84 4.67 4.67 0 014.69-4.69z"/></symbol></svg>    </div>
+
+    <div class="page-content">
+        <aside class="page-sidebar">
+            <div class="page-sidebar-inner">
+                <img src="img/delko-logo.png" alt="" class="page-logo">
+
+                <nav class="main-nav">
+                    <a href="#" class="main-nav__link active">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-info">
+                            <use xlink:href="#info"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="main-nav__link">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-cash">
+                            <use xlink:href="#cash"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="main-nav__link">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-truck">
+                            <use xlink:href="#truck"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="main-nav__link">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-wrench">
+                            <use xlink:href="#wrench"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="main-nav__link">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-papers">
+                            <use xlink:href="#papers"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="main-nav__link">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-work">
+                            <use xlink:href="#work"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="main-nav__link">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-award">
+                            <use xlink:href="#award"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="main-nav__link">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-docs">
+                            <use xlink:href="#docs"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="main-nav__link">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-shield">
+                            <use xlink:href="#shield"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="main-nav__link">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-return">
+                            <use xlink:href="#return"></use>
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+        <main class="page-main">
+
+
+<div class="page-nav">
+    <h1 class="page-nav__heading">
+        Общая информация о БН
+    </h1>
+    <nav class="page-nav__links">
+        <a href="#" class="page-nav__link">
+            Места присутствия
+        </a>
+        <a href="#" class="page-nav__link active">
+            Орг.структура
+        </a>
+        <a href="#" class="page-nav__link">
+            Персонал
+        </a>
+        <a href="#" class="page-nav__link">
+            Парк
+        </a>
+        <a href="#" class="page-nav__link">
+            Пробег
+        </a>
+        <a href="#" class="page-nav__link">
+            Финансовые показатели
+        </a>
+        <a href="#" class="page-nav__link">
+            Затраты
+        </a>
+    </nav>
+</div>
+
+
+<section class="structure-info">
+    <div class="structure-info__inner">
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>
+
+                    </th>
+                    <th>
+                        план
+                    </th>
+                    <th>
+                        факт
+                    </th>
+                    <th>
+                        укомплектованность
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <b>
+                            Всего сотрудников
+                        </b>
+                    </td>
+                    <td>
+                        <b>
+                            7 706
+                        </b>
+                    </td>
+                    <td>
+                        <b>
+                            5 112
+                        </b>
+                    </td>
+                    <td>
+                        <div class="structure-info__percentage" style="--info-percent: 0.66;">
+                            <b>
+                                66%
+                            </b>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        АУП
+                    </td>
+                    <td>
+                        444
+                    </td>
+                    <td>
+                        228
+                    </td>
+                    <td>
+                        <div class="structure-info__percentage" style="--info-percent: 0.51;">
+                            51%
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Продавцы
+                    </td>
+                    <td>
+                        700
+                    </td>
+                    <td>
+                        280
+                    </td>
+                    <td>
+                        <div class="structure-info__percentage" style="--info-percent: 0.40;">
+                            40%
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Рабочие
+                    </td>
+                    <td>
+                        6 562
+                    </td>
+                    <td>
+                        4 604
+                    </td>
+                    <td>
+                        <div class="structure-info__percentage" style="--info-percent: 0.40;">
+                            40%
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<section class="structure-hierarchy">
+    <div class="structure-hierarchy__inner">
+        <div class="structure-hierarchy__root">
+            <a href="#" class="structure-hierarchy__card structure-hierarchy__card--root">
+                <div class="structure-hierarchy__card-content">
+
+
+                    <div class="structure-hierarchy__card-role">
+                        Генеральный директор
+                    </div>
+                    <div class="structure-hierarchy__card-name">
+                        Латыпов Р.Р.
+                    </div>
+                    <div class="structure-hierarchy__card-image-container">
+                        <img src="img/ceo.jpg" alt="" class="structure-hierarchy__card-image">
+                    </div>
+                    <div class="structure-hierarchy__connection">
+
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="structure-hierarchy__grid">
+
+            <a href="#" class="structure-hierarchy__card">
+                <div class="structure-hierarchy__card-content">
+                    <div class="structure-hierarchy__card-role">
+                        Продажи и логистика
+                    </div>
+                    <div class="structure-hierarchy__card-name">
+                        Шайхулов Р.Р.
+                    </div>
+                    <div class="structure-hierarchy__card-image-container">
+                        <img src="img/personel/1.jpg" alt="" class="structure-hierarchy__card-image">
+                    </div>
+
+                    <div class="structure-hierarchy__connection">
+
+                    </div>
+                    <div class="structure-hierarchy__connection-right"></div>
+                </div>
+                <div class="structure-hierarchy__card-progress" style="--hierarchy-progress: 0.4;">
+                    <div class="structure-hierarchy__card-progress-amount">
+                        700 / 280
+                    </div>
+                    <div class="structure-hierarchy__card-progress-percentage">
+                        40%
+                    </div>
+
+                </div>
+
+            </a>
+            <a href="#" class="structure-hierarchy__card">
+                <div class="structure-hierarchy__card-content">
+                    <div class="structure-hierarchy__card-role">
+                        Заместитель генерального директора
+                    </div>
+                    <div class="structure-hierarchy__card-name">
+                        Гоменюк А.А.
+                    </div>
+                    <div class="structure-hierarchy__card-image-container">
+                        <img src="img/personel/2.jpg" alt="" class="structure-hierarchy__card-image">
+                    </div>
+
+                    <div class="structure-hierarchy__connection">
+
+                    </div>
+                    <div class="structure-hierarchy__connection-right"></div>
+                    <div class="structure-hierarchy__connection-left"></div>
+                </div>
+                <div class="structure-hierarchy__card-progress" style="--hierarchy-progress: 1;">
+                    <div class="structure-hierarchy__card-progress-amount">
+                        1 / 1
+                    </div>
+                    <div class="structure-hierarchy__card-progress-percentage">
+                        100%
+                    </div>
+
+                </div>
+            </a>
+            <a href="#" class="structure-hierarchy__card">
+                <div class="structure-hierarchy__card-content">
+                    <div class="structure-hierarchy__card-role">
+                        Маркетинг и качество
+                    </div>
+                    <div class="structure-hierarchy__card-name">
+                        Яровых А.Б.
+                    </div>
+                    <div class="structure-hierarchy__card-image-container">
+                        <img src="img/personel/3.jpg" alt="" class="structure-hierarchy__card-image">
+                    </div>
+
+                    <div class="structure-hierarchy__connection">
+
+                    </div>
+                    <div class="structure-hierarchy__connection-right"></div>
+                    <div class="structure-hierarchy__connection-left"></div>
+                </div>
+
+                <div class="structure-hierarchy__card-progress" style="--hierarchy-progress: 0.37;">
+                    <div class="structure-hierarchy__card-progress-amount">
+                        35 / 13
+                    </div>
+                    <div class="structure-hierarchy__card-progress-percentage">
+                        37%
+                    </div>
+
+                </div>
+            </a>
+            <a href="#" class="structure-hierarchy__card">
+                <div class="structure-hierarchy__card-content">
+                    <div class="structure-hierarchy__card-role">
+                        Дирекцияпо закупкам ТЭК
+                    </div>
+                    <div class="structure-hierarchy__card-name">
+                        Ермаков С.В.
+                    </div>
+                    <div class="structure-hierarchy__card-image-container">
+                        <img src="img/personel/4.jpg" alt="" class="structure-hierarchy__card-image">
+                    </div>
+                    <div class="structure-hierarchy__connection">
+
+                    </div>
+                    <div class="structure-hierarchy__connection-right"></div>
+                    <div class="structure-hierarchy__connection-left"></div>
+                </div>
+
+                <div class="structure-hierarchy__card-progress" style="--hierarchy-progress: 0.21;">
+                    <div class="structure-hierarchy__card-progress-amount">
+                        19 / 4
+                    </div>
+                    <div class="structure-hierarchy__card-progress-percentage">
+                        21%
+                    </div>
+
+                </div>
+            </a>
+            <a href="#" class="structure-hierarchy__card">
+                <div class="structure-hierarchy__card-content">
+                    <div class="structure-hierarchy__card-role">
+                        Бизнес-анализ и контроль
+                    </div>
+                    <div class="structure-hierarchy__card-name">
+                        Ихсанова Р.В.
+                    </div>
+                    <div class="structure-hierarchy__card-image-container">
+                        <img src="img/personel/5.jpg" alt="" class="structure-hierarchy__card-image">
+                    </div>
+
+                    <div class="structure-hierarchy__connection">
+
+                    </div>
+                    <div class="structure-hierarchy__connection-right"></div>
+                    <div class="structure-hierarchy__connection-left"></div>
+                </div>
+
+
+
+                <div class="structure-hierarchy__card-progress" style="--hierarchy-progress: 0.56">
+                    <div class="structure-hierarchy__card-progress-amount">
+                        16 / 9
+                    </div>
+                    <div class="structure-hierarchy__card-progress-percentage">
+                        56%
+                    </div>
+
+                </div>
+            </a>
+            <a href="#" class="structure-hierarchy__card">
+
+                <div class="structure-hierarchy__card-content">
+                    <div class="structure-hierarchy__card-role">
+                        Школа Делко
+                    </div>
+                    <div class="structure-hierarchy__card-name">
+                        Пышечкина Е.С
+                    </div>
+                    <div class="structure-hierarchy__card-image-container">
+                        <img src="img/personel/6.jpg" alt="" class="structure-hierarchy__card-image">
+                    </div>
+                    <div class="structure-hierarchy__connection">
+
+                    </div>
+                    <div class="structure-hierarchy__connection-right"></div>
+                    <div class="structure-hierarchy__connection-left"></div>
+                </div>
+
+                <div class="structure-hierarchy__card-progress" style="--hierarchy-progress: 0.48;">
+                    <div class="structure-hierarchy__card-progress-amount">
+                        29 / 14
+                    </div>
+                    <div class="structure-hierarchy__card-progress-percentage">
+                        48%
+                    </div>
+
+                </div>
+
+            </a>
+            <a href="#" class="structure-hierarchy__card">
+                <div class="structure-hierarchy__card-content">
+                    <div class="structure-hierarchy__card-role">
+                        Развитие Делко
+                    </div>
+                    <div class="structure-hierarchy__card-name">
+                        Савенков О.И.
+                    </div>
+                    <div class="structure-hierarchy__card-image-container">
+                        <img src="img/personel/7.jpg" alt="" class="structure-hierarchy__card-image">
+                    </div>
+
+
+                    <div class="structure-hierarchy__connection">
+
+                    </div>
+                    <div class="structure-hierarchy__connection-right"></div>
+                    <div class="structure-hierarchy__connection-left"></div>
+                </div>
+
+
+                <div class="structure-hierarchy__card-progress" style="--hierarchy-progress: 0.5;">
+                    <div class="structure-hierarchy__card-progress-amount">
+                        2 / 1
+                    </div>
+                    <div class="structure-hierarchy__card-progress-percentage">
+                        50%
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="structure-hierarchy__card">
+                <div class="structure-hierarchy__card-content">
+                    <div class="structure-hierarchy__card-role">
+                        Корпоративная защита и работа с персоналом
+                    </div>
+                    <div class="structure-hierarchy__card-name">
+                        Садриев А.И
+                    </div>
+                    <div class="structure-hierarchy__card-image-container">
+                        <img src="img/personel/8.jpg" alt="" class="structure-hierarchy__card-image">
+                    </div>
+
+
+                    <div class="structure-hierarchy__connection">
+
+                    </div>
+                    <div class="structure-hierarchy__connection-left"></div>
+
+                </div>
+
+
+                <div class="structure-hierarchy__card-progress" style="--hierarchy-progress: 0.35;">
+                    <div class="structure-hierarchy__card-progress-amount">
+                        20 / 7
+                    </div>
+                    <div class="structure-hierarchy__card-progress-percentage">
+                        35%
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="structure-hierarchy__card" style="grid-column: 2 / span 2;">
+                <div class="structure-hierarchy__card-content">
+                    <div class="structure-hierarchy__card-role">
+                        Эксплуатация транспорта
+                    </div>
+                    <div class="structure-hierarchy__card-name">
+                        Кутилин Р.В.
+                    </div>
+                    <div class="structure-hierarchy__card-image-container">
+                        <img src="img/personel/9.jpg" alt="" class="structure-hierarchy__card-image">
+                    </div>
+
+
+                    <div class="structure-hierarchy__connection">
+
+                    </div>
+                    <div class="structure-hierarchy__connection-right"></div>
+                    <div class="structure-hierarchy__connection-right-edge"></div>
+
+                </div>
+
+
+                <div class="structure-hierarchy__card-progress" style="--hierarchy-progress: 0.7;">
+                    <div class="structure-hierarchy__card-progress-amount">
+                        6670 / 4665
+                    </div>
+                    <div class="structure-hierarchy__card-progress-percentage">
+                        70%
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="structure-hierarchy__card">
+                <div class="structure-hierarchy__card-content">
+                    <div class="structure-hierarchy__card-role">
+                        Техническое сопровождение
+                    </div>
+                    <div class="structure-hierarchy__card-name">
+                        Смирнов В.В.
+                    </div>
+                    <div class="structure-hierarchy__card-image-container">
+                        <img src="img/personel/10.jpg" alt="" class="structure-hierarchy__card-image">
+                    </div>
+
+
+                    <div class="structure-hierarchy__connection">
+
+                    </div>
+                    <div class="structure-hierarchy__connection-left"></div>
+
+                </div>
+
+
+                <div class="structure-hierarchy__card-progress" style="--hierarchy-progress: 0.7;">
+                    <div class="structure-hierarchy__card-progress-amount">
+                        212 / 116
+                    </div>
+                    <div class="structure-hierarchy__card-progress-percentage">
+                        55%
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+        </main>
+        <style>
+            .ie-placeholder {
+                z-index: 4000;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #202020;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                
+            }
+            .ie-placeholder__message {
+                font-size: 2rem;
+                line-height: 1.2;
+                font-weight: 500;
+                margin: auto;
+            }
+            @supports (display: grid) {
+                .ie-placeholder {
+                    display: none;
+                }
+            }
+        </style>
+        <div class="ie-placeholder">
+            <div class="ie-placeholder__message">
+                Извините, ваш браузер не поддерживается
+            </div>
+        </div>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="assets/js/backend.js"></script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+.structure-hierarchy {
+    width: 100%;
+    max-width: 151rem;
+    margin: 0 auto;
+    margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+        margin: 0 -1.8rem;
+        padding: 0 1.8rem;
+        margin-bottom: 4rem;
+        max-width: none;
+        width: auto;
+        position: relative;
+        @include noScrollbar();
+
+        &::after {
+            content: '';
+            width: 1.8rem;
+            height: 1px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+
+.structure-hierarchy__inner {
+    @include breakpoint(mobile) {
+        flex-shrink: 0;
+        width: 150rem;
+
+    }
+}
+
+.structure-hierarchy__root {
+    margin: 0 auto;
+    width: 27rem;
+    margin-bottom: 11.9rem;
+
+    
+}
+
+.structure-hierarchy__card-content {
+    min-height: 10rem;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+    transition: background-color .2s;
+    &:hover {
+        background-color: var(--primary-color-hover);
+    }
+    .structure-hierarchy__card--root & {
+        background: #777776;
+        min-height: 12rem;
+    }
+}
+
+.structure-hierarchy__card {
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+
+    position: relative;
+    z-index: 1;
+
+    grid-column: span 2;
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.structure-hierarchy__card-role {
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: -0.01em;
+
+    .structure-hierarchy__card--root & {
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+}
+
+.structure-hierarchy__card-name {
+    margin-top: auto;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-style: italic;
+}
+
+.structure-hierarchy__card-image-container {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    right: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    bottom: -1rem;
+
+    .structure-hierarchy__card--root & {
+        width: 7rem;
+        height: 7rem;
+        bottom: -2rem;
+    }
+}
+
+.structure-hierarchy__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.structure-hierarchy__connection {
+    position: absolute;
+
+    transform: translateX(-50%);
+    background-color: #e9e8e8;
+    width: 1px;
+    pointer-events: none;
+    height: 5.4rem;
+    left: 50%;
+    bottom: 100%;
+
+    .structure-hierarchy__card--root & {
+        top: 100%;
+        bottom: auto;
+        height: 7rem;
+        background-color: #e9e8e8;
+        height: 6.5rem;
+    }
+}
+
+.structure-hierarchy__connection-left {
+    width: calc(100% / 2 + (1rem / 2));
+    position: absolute;
+    right: 50%;
+    bottom: 100%;
+    margin-bottom: 5.4rem;
+    height: 1px;
+    background-color: #e9e8e8;
+}
+
+.structure-hierarchy__connection-right {
+    width: calc(100% / 2 + (1rem / 2));
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    margin-bottom: 5.4rem;
+    height: 1px;
+    background-color: #e9e8e8;
+}
+
+.structure-hierarchy__connection-right-edge {
+    position: absolute;
+
+    
+    background-color: #e9e8e8;
+    width: 1px;
+    pointer-events: none;
+    height: 5.4rem;
+    margin-bottom: calc(5.4rem + 1px);
+    right: 0;
+    bottom: 100%;
+}
+.structure-hierarchy__connection-top {
+}
+
+.structure-hierarchy__grid {
+    display: grid;
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+    grid-gap: 1rem;
+    grid-row-gap: 11rem;
+}
+
+.structure-hierarchy__card-progress {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    height: 3rem;
+    background-color: #f3f3f3;
+    border-radius: 1rem;
+    padding: 0 1.2rem;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 1rem;
+    color: rgba(#000000, 0.6);
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #cacaca;
+        z-index: -1;
+        transform-origin: left center;
+        transform: scaleX(var(--hierarchy-progress, 0));
+    }
+}
